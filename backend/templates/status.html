@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Daily Doser Status</title>
+        <link href="https://mattduck.github.io/generic-css/css/generic-light.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <h1> Daily Doser Status</h1>
+
+        <h2> Last Dose Record</h2>
+
+        <p> 
+            <strong>MEDICATION:</strong> {{ medication }} </p>
+        </p>
+
+        <p>
+            <strong>TIMESTAMP:</strong> {{ timestamp }} 
+        </p>
+
+        <h2> API Description </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Resource/Path</th>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>/api/dose</td>
+                    <td>POST</td>
+                    <td> Submit dose record as JSON</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
