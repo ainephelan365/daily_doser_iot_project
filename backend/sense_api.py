@@ -4,6 +4,7 @@ from datetime import datetime
 # Creating Flask App
 app = Flask(__name__)
 
+
 # in-memory data storage 
 last_event = {
     "medication": "None",
@@ -14,9 +15,7 @@ last_event = {
 
 @app.route('/')
 def index():
-    """
-    Render the device status web page.
-    """
+
     return render_template(
         'status.html',
         medication=last_event["medication"],
@@ -28,15 +27,6 @@ def index():
 
 @app.route('/api/dose', methods=['POST'])
 def api_dose():
-    """
-    Receiving medication dosage record as a JSON file.
-    Example:
-    {
-        "medication": "Spironolactone",
-        "timestamp": "2025-11-31T12:00:00",
-        "dose_taken": true
-    }
-    """
 
     # Read the JSON data sent by client
     data = request.get_json() or {}
@@ -55,7 +45,8 @@ def api_dose():
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",  # Allow access from other devices
-        port=5000
+        port=5000,
+	debug=True
 
     )
 
