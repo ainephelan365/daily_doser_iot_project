@@ -2,13 +2,55 @@
 <html>
     <head>
         <title> Daily Doser Status</title>
-        <link href="https://mattduck.github.io/generic-css/css/generic-light.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
     </head>
 
     <body>
-        <h1> Daily Doser Status</h1>
+        <h1 class="title is-1 has-text-centred"> DAILY DOSER STATUS WEBPAGE</h1>
+<div id="navbar">
+  <!-- START NAV -->
+  <nav class="navbar has-background-black">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+      </a>
+      <span class="navbar-burger has-background-black" data-target="navbarMenu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </span>
+       
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end has-background-black">
+        <a class="navbar-item has-text-white"  href= "/index">
+          Dashboard
+        </a>
+        <a class="navbar-item has-text-white"  href= "/preferences">
+          Preferences
+        </a>
+        <a class="navbar-item has-text-white"  href= "/cityfocus_Menu">
+          Medicine History
+        </a>
+        <a class="navbar-item has-text-white"  href= "/contact">
+          Account
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAV -->
+</div>
 
-        <h2> Last Dose Record</h2>
+ 
+
+         <p>
+            This Webpage is home to the Daily Doser Status Webpage!
+            As of Janurary 2026, The page displays Medication and Timestamp captured when the Raspberry Pi captures 
+            the QR Code! 
+        </p>
+
+        <div class=="has-text-centered">
+         <h2 class="title is-4 has text-centered"> Last Dose Record</h2>
+        
 
         <p> 
             <strong>MEDICATION:</strong> {{ medication }} </p>
@@ -17,8 +59,12 @@
         <p>
             <strong>TIMESTAMP:</strong> {{ timestamp }} 
         </p>
+        </div>
 
-        <h2> API Description </h2>
+
+
+          <div class=="has-text-centered">
+         <h2 class="title is-4 has text-centered">API Description</h2>
         <table>
             <thead>
                 <tr>
@@ -32,10 +78,11 @@
                 <tr>
                     <td>/api/dose</td>
                     <td>POST</td>
-                    <td> Submit dose record as JSON</td>
+                    <td> Submit dose record as JSON file.</td>
                 </tr>
             </tbody>
         </table>
+ </div>
     </body>
 </html>
 
