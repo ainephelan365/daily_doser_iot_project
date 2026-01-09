@@ -62,13 +62,18 @@ def main():
     print("QR Code Scanner currently running...")
     print("Sending JSON Event to:", API_URL)
 
+#Actively captures an image with Pi camera
     try:
        while True:
             capture_photo(picam2)
             qr_text_name = decoding_qrcode_image()
 
+#Decodes the QR code found
             if qr_text_name:
                 now = time()
+
+#This sends the data only when QR is new or when the cooldown time has finished
+
                 if (qr_text_name != LAST_QR) or (now - LAST_SENT > COOLDOWN_SECONDS):
                     print("QR CODE DETECTED:", qr_text_name)
                     send_to_api(qr_text_name)
