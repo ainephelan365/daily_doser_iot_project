@@ -41,7 +41,8 @@
 
 
 
-<h4><em>CONTACT INFORMATION</em></h4>
+<h4><em>CONTACT INFORMATION AND VIDEO DEMO</em></h4>
 
+<p>YOUTUBE DEMO VIDEO LINK: https://youtu.be/Y3Ebcpi2pXI </p>
 <p>For further information, guidance and correspondence, contact myself Áine on github <em>ainephelan365</em> or send a message on Slack!</p>
 <p>Follow the Instagram page for more updates, content and posts! https://www.instagram.com/daily_doser_project/   </p>
